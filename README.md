@@ -2,6 +2,11 @@
 
 # Simple Shopping Cart - Javascript
 
+
+https://afnanjk2017.github.io/Shopping-Cart-JavaScript-main-20240414T021951Z-0011/
+
+
+
 This is a Shopping Cart built with HTML, CSS,Bootstrap & JavaScript. In this simple shopping cart web application project I have used  some of the more intermediate advanced parts of the document object model or the javascript dom to show  how to build this web application. 
 
 ## Features
@@ -22,15 +27,6 @@ Built with:
 - CSS
 - Bootstrap
 - JavaScript
-
-## Screenshots
-
-
-![](images/1.jpeg)
-
-![](images/2.jpeg)
-
-![](images/4.jpeg)
 
 
 
