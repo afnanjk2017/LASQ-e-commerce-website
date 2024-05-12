@@ -89,6 +89,10 @@ function  quantityChanged(event){
     updateCartTotal();
 }
 
+function typechange(event){
+   
+     updateCartTotal();
+}
 
 function addToCartClicked(event){
     var button = event.target;
@@ -124,7 +128,14 @@ function addItemToCart(title, price, imageSrc){
         <td class="cart-item cart-column">
             <input class="cart-quantity-input" type="number" value="1" style="width: 50px">
             <button class="btn btn-danger" type="button">حذف</button>
-        </td>        
+        </td>  
+        <td class="cart-item cart-column">
+        <select id="typee" name="t">
+        <option value="phy">غير رقمي</option>
+        <option value="digital">رقمي</option>
+       
+      </select>
+        </td>          
     `;
      
             
@@ -132,6 +143,8 @@ function addItemToCart(title, price, imageSrc){
     cartItems.append(cartRow);
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem);
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+    //cartRow.getElementById('typee').addEventListener('change', typechange)
+    cartRow.querySelector('#typee').addEventListener('change', typechange)
 }
 
 
@@ -143,7 +156,12 @@ function updateCartTotal(){
         var cartRow =cartRows[i];
         var priceElement = cartRow.getElementsByClassName('cart-price')[0];
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
+        var typee = cartRow.querySelector('#typee');
+       
         var price = parseFloat(priceElement.innerText.replace('SAR ' , ''))
+        if (typee.value == "digital"){
+            price = price /2;
+        }
         var quantity = quantityElement.value;
         total = total + (price * quantity);
          

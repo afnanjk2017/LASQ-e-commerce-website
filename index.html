@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مطبعة إلكترونية</title>
 
-<!------ Google Fonts ------>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Karla:wght@200;300;400;500&family=Montserrat+Alternates:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 
 <!-- Bootstrap CSS-->	
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -35,8 +31,10 @@
 <div>
 <nav class="navbar fixed-top bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" ><i class="fa-solid fa-gift" style="margin-right: 6%;"></i>لصِّق</a>
-
+      <a class="navbar-brand nav-text" href="index.html">
+        <img src="images/IT473 - Project Report .png"
+             alt="logo" width="130" height="70" class="d-inline-block align-text-top"> &nbsp; 
+   </a>
       <a href="#shopping-cart" style="color: rgb(51, 51, 85);">  <i style="margin-right: 1%;" class="fa-solid fa-cart-shopping justify-content-end fa-xl" ></i></a>
      
     </div>
@@ -54,16 +52,19 @@
 
     <section id="home-sec" class="flexible home-sec">
       <div class="eye-grabber-img">
-        <img src="https://img.freepik.com/premium-psd/top-view-sticker-collection-mock-up_23-2148884462.jpg?w=996" alt="Image of Apples" style="width: 100%; height: 100%; overflow: hidden;  border-radius: 50%;" />
+        <img src="https://img.freepik.com/premium-psd/top-view-sticker-collection-mock-up_23-2148884462.jpg?w=996" alt="Image of stickers" style="width: 100%; height: 100%; overflow: hidden;  border-radius: 50%;" />
+
+        <!--<img src="https://img.freepik.com/premium-psd/top-view-sticker-collection-mock-up_23-2148884462.jpg?w=996" alt="Image of stickers" style="width: 100%; height: 100%; overflow: hidden;  border-radius: 50%;" /> -->
       </div>
       <div class="eye-grabber">
-        <h1>Fresh, Crispy, Heavenly.</h1>
-        <h2>
-          100% Organic, vivid varieties of apples grown in Kashmir aka The
-          Heaven of Earth.
-        </h2>
+        <h1 style="font-family: 'Droid Arabic Kufi', serif;">لصِّق</h1><br>
+        <h4>
+          موقع لصِّق للمنتجات القابلة للطباعة و المنتجات الرقمية يقدم مجموعة متنوعة من التصاميم المميزة. من الأعمال الفنية إلى القرطاسية ومستلزمات الحفلات، عملية الشراء من خلال ثلاث خطوات سهلة : 
+          
+        </h4><br>
+        <h5> ١- اختر منتجك المفضل ٢- أتم عملية الشراء ٣- حسب اختيارك سيصلك المنتج لمنزلك او عبر بريدك الالكتروني</h5><br>
         <button class="btn  mt-auto " onclick="window.location.href = '#aa';">
-          Buy Now
+          تصفح المنتجات
         </button>
         </div>
         </section>
@@ -113,8 +114,9 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title">   ستيكرات</h4>
+        
       </div>
      
             <div class=" col filter-item all new office-wear">
@@ -294,8 +296,9 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title">  ستيكرات</h4>
+       
       </div>
      
             <div class=" col filter-item all new office-wear">
@@ -574,6 +577,17 @@
         </div>
       </div>
 
+      <div class=" col filter-item all offers">
+        <div class="card h-100">
+          <img src="images/9418617.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title"> حزمة ملصقات لأصحاب الأعمال</h5>
+            <p class="card-text shop-item-price"> 30 SAR</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto  btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>إضافة الى السلة</button>
+          </div>
+        </div>
+      </div>
+
 
     </div>
   </div>
@@ -596,6 +610,7 @@
       <th>المنتج</th>
       <th>السعر</th>
       <th>الكمية</th>
+      <th>النوع</th>
     </tr>
   </thead>
   <tbody class="cart-items">
@@ -608,9 +623,11 @@
       <strong class="cart-total-title">المجموع</strong>
       <span  class="cart-total-price" style="text-align: right;">SAR 0</span>
     </div>
- 
+    <label for="fname">البريد الالكتروني</label>
+    <input type="email" id="fname" name="fname" style= "margin-top: 5%;"><br>
 
     <div class="btn-purchase" style="margin-top: 10%;">
+     
       <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>شراء</button>
     </div>
 
@@ -621,9 +638,14 @@
   <div class="card text-center">
    
     <div class="card-body">
-      <h3 class="card-title"><i class="fa-solid fa-gift" style="margin-right: 1%;"></i>لصِّق</h3>
-      <p> This is a suggested e-commerce concept and the pictures used are for illustrative purposes only. They do not belong to the creator of this concept. All image credits and rights belong to their respective owners
-      </p> <p> Afnan Almukhlef, Khuzama Alkhowaiter and Leena Alharbi </p> 
+      <h3 class="card-title"> </h3>
+       <b>This is a suggested e-commerce concept and the pictures used are for illustrative purposes only. They do not belong to the creator of this concept. All image credits and rights belong to their respective owners
+         </b>
+      <br> 
+      <img src="images/IT473 - Project Report  (1).png"
+      alt="logo" width="80" height="80" class="d-inline-block align-text-top" ></i>
+      <p> Afnan, Khuzama and Leena  </p> 
+    
     </div>
     <div class="card-footer text-muted">
        <p></p>
