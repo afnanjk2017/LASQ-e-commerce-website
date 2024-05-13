@@ -83,11 +83,11 @@
 <!--Filter Button-->
 <div class = "filter-btns" >
   
-  <button type = "button" class = "filter-btn" id = "all">جميع المنتجات</button>
-  <button type = "button" class = "filter-btn" id = "new">جديدنا</button>
-  <button type = "button" class = "filter-btn" id = "office-wear">تخرج</button>
-  <button type = "button" class = "filter-btn" id = "t-shirts">عيد</button>
-  <button type = "button" class = "filter-btn" id = "offers">منوعات</button>
+  <button type = "button" class = "filter-btn" id="all">جميع المنتجات</button>
+  <button type = "button" class = "filter-btn" id="new">جديدنا</button>
+  <button type = "button" class = "filter-btn" id ="office-wear">تخرج</button>
+  <button type = "button" class = "filter-btn" id ="t-shirts">عيد</button>
+  <button type = "button" class = "filter-btn" id ="offers">منوعات</button>
 </div>
 
 
@@ -792,10 +792,117 @@
     <label for="fname">البريد الالكتروني</label>
     <input type="email" id="fname" name="fname" style= "margin-top: 5%;"><br>
 
-    <div class="btn-purchase" style="margin-top: 10%;">
+    <div  style="text-align: center;
+    margin: auto;
+    padding: 2%;
+    width: 50%; margin-top: 10%;">
      
-      <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>شراء</button>
+      <button type="button" style="text-align: center;
+      margin: auto;
+      padding: 2%;
+      width: 50%;" class="btn btn-dark  " data-bs-toggle="modal" data-bs-target="#myModalp" ><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>شراء</button>
     </div>
+
+
+
+
+
+
+      <!-- The Modal -->
+<div class="modal" id="myModalp">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title">  تفاصيل المنتج</h4>
+      </div>
+     
+           
+
+      <div class="row" style="padding: 5px 20px 15px 20px;">
+        <div class="col-50">
+          <h3>معلومات العميل </h3>
+          <label for="fname"><i class="fa fa-user"></i>الاسم الكامل</label>
+          <input type="text" id="fname" name="firstname" placeholder="John M. Doe"><br>
+          <label for="email"><i class="fa fa-envelope"></i> الايميل</label>
+          <input type="text" id="email" name="email" placeholder="john@example.com"><br>
+          <label for="adr"><i class="fa fa-address-card-o"></i> العنوان</label>
+          <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"><br>
+          <label for="city"><i class="fa fa-institution"></i> المدينه</label>
+          <input type="text" id="city" name="city" placeholder="New York"><br>
+
+          <div class="row">
+            <div class="col-50">
+              <label for="state">المحافظه</label>
+              <input type="text" id="state" name="state" placeholder="NY">
+            </div>
+            <div class="col-50">
+              <label for="zip">الرقم البريدي</label>
+              <input type="text" id="zip" name="zip" placeholder="10001">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-50">
+          <h3>الدفع</h3>
+          <label for="fname">البطاقات المتوافقه</label>
+          <div class="icon-container">
+            <i class="fa fa-cc-visa" style="color:navy;"></i>
+            <i class="fa fa-cc-amex" style="color:blue;"></i>
+            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            <i class="fa fa-cc-discover" style="color:orange;"></i>
+          </div>
+          <label for="cname">الاسم على البطاقه</label>
+          <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+          <label for="ccnum">رقم البطاقه</label>
+          <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+          <label for="expmonth">شهر الانتهاء </label>
+          <input type="text" id="expmonth" name="expmonth" placeholder="September">
+          <div class="row">
+            <div class="col-50">
+              <label for="expyear">سنه الانتهاء</label>
+              <input type="text" id="expyear" name="expyear" placeholder="2018">
+            </div>
+            <div class="col-50">
+              <label for="cvv">CVV رقم </label>
+              <input type="text" id="cvv" name="cvv" placeholder="352">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <label>
+        <input type="checkbox" checked="checked" name="sameadr"> عنوان الشحن 
+      </label>
+      <div class="btn-purchase" style="margin-top: 10%;">
+     
+        <button type="button"  class="btn btn-dark btn-purchase"  ><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>شراء</button>
+      </div>
+      
+
+
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        ..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 </section>
  
@@ -803,6 +910,21 @@
 <section id="footer">
   <div class="card text-center">
    
+    <div class="card-footer text-muted">
+      <p></p>
+      <p></p>
+   
+    <section class="contact-section">
+      <h2>تواصل معنا </h2>
+      <div class="contact-info">
+          <p><strong>البريد الإلكتروني: </strong> <a href="mailto:Lassiq@ourecommerce.com">Lassiq@ourecommerce.com</a></p>
+          <p><strong> واتس اب: </strong> +966 XXXXXXX</p>
+      </div>
+    </section> 
+  </div>
+
+
+
     <div class="card-body">
       <h3 class="card-title"> </h3>
        <b>This is a suggested e-commerce concept and the pictures used are for illustrative purposes only. They do not belong to the creator of this concept. All image credits and rights belong to their respective owners

@@ -1,9 +1,14 @@
+
+
+
 /* Image Filter Section */
+
 
 const allFilterItems = document.querySelectorAll('.filter-item');
 const allFilterBtns = document.querySelectorAll('.filter-btn');
 
 window.addEventListener('DOMContentLoaded', () => {
+   
     allFilterBtns[1].classList.add('active-btn');
 });
 
@@ -24,6 +29,9 @@ function showFilteredContent(btn){
         }
     });
 }
+
+
+
 
 function resetActiveBtn(){
     allFilterBtns.forEach((btn) => {
